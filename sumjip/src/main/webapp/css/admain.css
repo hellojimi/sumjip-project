@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* Fixed sidenav, full height */
+
+.header-section{
+    color: #113000;
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+.header-section > .top-nav{
+   height: 50px;
+    padding-top: 15px;
+}
+
+.sidenav {
+   height: 100%;
+   width: 200px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color:#113000;
+   overflow-x: hidden;
+   padding-top: 20px;
+   margin-top: 50px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+   padding: 6px 8px 6px 16px;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: 1000;
+   color: white;
+   display: block;
+   border: none;
+   background: none;
+   width: 100%;
+   text-align: left;
+   cursor: pointer;
+   outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+   color: white;
+}
+
+/* Main content */
+.main {
+   margin-left: 200px; /* Same as the width of the sidenav */
+   font-size: 20px; /* Increased text to enable scrolling */
+   padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+   background-color: 113000;
+   color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+   background-color: 113000;
+   padding-left: 8px;
+}
+
+.dropdown-container a {
+   font-weight: 400;
+   color: #999;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+   float: right;
+   padding-right: 8px;
+}
+
+.kokuchi{
+	margin: auto;
+    width: 100%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+
+.kokuchi tr td{
+	border: 1px solid #777;
+	text-align: center;
+	padding: 5px 0;
+}
+
+
+.kokuchi_title{
+	text-align: center;
+    padding: 75px 0 40px 0px;
+    font-size: 30px;
+    color: black;
+    border: 10px;
+    width: 80%;
+}
+
+.adminLogo{
+	color:#777; 
+	font-size:20px;
+	margin-top:10px;
+}
+
+.adminichi{
+	width: 1000px;
+    height: 600px;
+}
+
+.teeburu{
+	margin: 0 auto;
+	width: 80%;
+    height: 80%;
+}
+
+.taitoru{
+	padding-top: 20px;
+	text-align:center;
+}
+.botann{
+	float:right;
+	border: none;
+    background-color: #113000;
+    color: white;
+    margin-right: 100px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 7px 7px 5px;
+    position:absolute;
+    right: 10px;
+    bottom: -10px;
+}
+.migi{
+	padding-left: 660px;
+    padding-bottom: 5px;
+}
+.kennsaku{
+    border: none;
+    background-color: #113000;
+    color: white;
+    box-shadow: none;
+    border-radius: 2px;
+    padding: 3px 10px;
+}
+.peigingu{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #113000;
+    border: none;
+    border-radius: 2px;
+    padding: 7px 13px 5px;
+    margin-right: 7px;
+    display:block;
+    
+}
+.teeburu tr th {
+	text-align: center;
+	background-color: #113000;
+	color: white;
+	padding: 7px 0;
+}
+.teeburu tr td {
+	text-align: center;
+	padding: 3px 0;
+}
+
+.peigingu .pp{
+	color: white;
+    background-color: #113000;
+    width:24px;
+    height:24px;
+    border-radius: 2px;
+    display:inline-block;
+    margin: px 5px;
+}
+.pojisyonn{
+	position:relative;
+}
+.peigingu .ppp{
+	color: white;
+    background-color: #113000;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 7px 7px 5px;
+    border: none;
+}
+.iro label{
+	color: black;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.ugoke{
+	position:absolute;
+}

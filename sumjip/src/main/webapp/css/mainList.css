@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+.mainsearch_button{
+	border-radius: 16px;
+	background:#FFA75A; 
+	width: 35%;
+  display: block;
+  color: #3B3B3B;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 5px 20px;
+}
+
+.mainsearch_button{
+	color: #3B3B3B;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid #FFA75A;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.mainsearch_button:hover {
+	color: #3B3B3B !important;
+	background-color: transparent;
+	text-shadow: nthree;
+}
+.mainsearch_button:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+
+.hotel_booking-table{
+	background: #FFFFFF;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2px 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.boking-table{
+margin-left: -50px;
+}
+
+.nice-select.wide {
+    width: 100%;
+     }
+
+.productsearch-section{
+	padding-top: 3px;
+	padding-bottom: 40px;
+}
+
+.search_name{
+	color:#000000;
+	text-align: center;
+	font-weight: bold;
+}
+
+.menu-item .nav-menu .mainmenu {
+	display: inline-block;
+	padding-top: 25px;
+}
+
+.nice-select.wide {
+    border-color: #ced4da;
+    height: 39px;
+    border-radius: 0.25rem;
+    margin-top: 1.3px;
+    margin-bottom: 1.3px;
+}
+
+.topBtn {cursor:pointer;
+text-align: right;
+font-size: 20px;
+font-weight: bold;
+color: #7F7F7F;
+}
+
+.footer-section {
+    background: #EAEAEA;
+}
+
+.logo {
+	width: 200px;
+	height: 80px;
+}
+
+.footer_logo{
+	width: 150px;
+	height: 80px;
+}
+
+#footer_G{
+	font-size: 14px;
+	color: #878787;
+}
+
+.ft-about{
+	padding-right: 5px;
+}
+
+.footer-section .footer-text .ft-about {
+    margin-bottom: 30px;
+    padding-left: 70px;
+}
+
+
+#footer-info{
+	color: #969696;
+	font-size: 12px;
+}
+
+#footer-line{
+	color: #D1D1D1;
+}
+
+#footer-sos{
+	padding-left: 50px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+#footer-qna{
+	font-weight: bold;
+	text-align: "center";
+	padding-left: 10px;
+}
+
+.row{
+/* 	display: flex; */
+/*     -ms-flex-wrap: wrap; */
+/*     flex-wrap: wrap; */
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#footer-tel{
+	font-size: 30px;
+	font-weight: bold;
+}
+

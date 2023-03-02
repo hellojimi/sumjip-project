@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.tb{
+	font-size: 30px;
+	margin: 3px;
+	color: #111111;
+	font-weight: 400;
+	font-family: "Lora", serif;
+	padding : 10px;
+	margin-left:500px;
+}
+.tb2{
+	font-size: 30px;
+	margin: 3px;
+	color: #111111;
+	font-weight: 400;
+	font-family: "Lora", serif;
+	padding : 10px;
+	margin-left:280px;
+}

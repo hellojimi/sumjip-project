@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Model2</display-name>
+<!--   주소가 입력되어 있지 읺으면 찾는 파일 -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+<!--   *.me 가상주소 -> 주소매핑 처리 파일로 연결 -> 처리담당자(서블릿) -->
+  <servlet>
+	<servlet-name>MemberFrontController</servlet-name>
+	<servlet-class>com.itwillbs.member.action.MemberFrontController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<url-pattern>*.me</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!--   *.bo 가상주소 -> 주소매핑 처리 파일로 연결 -> 처리담당자(서블릿) -->
+    <servlet>
+	<servlet-name>BoardFrontController</servlet-name>
+	<servlet-class>com.itwillbs.board.action.BoardFrontController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>BoardFrontController</servlet-name>
+  	<url-pattern>*.bo</url-pattern>
+  </servlet-mapping>
+  
+
+  <!--   *.ad 가상주소 -> 주소매핑 처리 파일로 연결 -> 처리담당자(서블릿) -->
+    <servlet>
+	<servlet-name>AdminFrontController</servlet-name>
+	<servlet-class>com.itwillbs.admin.action.AdminFrontController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>AdminFrontController</servlet-name>
+  	<url-pattern>*.ad</url-pattern>
+  </servlet-mapping>
+  
+
+   <!--   *.qa 가상주소 -> 주소매핑 처리 파일로 연결 -> 처리담당자(서블릿) -->
+    <servlet>
+	<servlet-name>QnaFrontController</servlet-name>
+	<servlet-class>com.itwillbs.qna.action.QnaFrontController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>QnaFrontController</servlet-name>
+  	<url-pattern>*.qa</url-pattern>
+  </servlet-mapping>
+  
+  <!--   *.pr 가상주소 -> 주소매핑 처리 파일로 연결 -> 처리담당자(서블릿) -->
+    <servlet>
+	<servlet-name>ProductsFrontController</servlet-name>
+	<servlet-class>com.itwillbs.products.action.ProductsFrontController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>ProductsFrontController</servlet-name>
+  	<url-pattern>*.pr</url-pattern>
+  </servlet-mapping>
+
+</web-app>

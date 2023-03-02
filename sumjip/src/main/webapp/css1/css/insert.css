@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+article{
+	font-family: 'NanumSquareNeo';
+  	max-width: 1000px;
+ 	margin: 0 auto;
+ 	padding: 20px;
+ 	margin-bottom: 50px
+}

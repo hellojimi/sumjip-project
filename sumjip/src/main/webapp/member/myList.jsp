@@ -21,87 +21,88 @@
 <meta charset="UTF-8">
 <title>섬집</title>
 <style type="text/css">
-	.wrap {
-		font-family: 'NanumSquareNeo';
-		max-width: 800px;
-		height: 800px;
-		margin: 0 auto;
-		padding: 20px;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		box-sizing: border-box;
-	}
-	
-	#myList {
-		margin-left: 130px;
-	}
- 	
- 	#myList h3 {
- 		font-family: 'NanumSquareNeoBold';
-		margin: 10px;
- 	}
- 	
- 	#myList h5 {
- 		font-family: 'NanumSquareNeoBold';
-		margin: 10px;
-		text-align: center;
- 	}
- 	
- 	#myList ul {
- 		margin: 50px 0px 40px 0px;
- 	}
- 	
- 	#myList ul li {
- 		list-style: none;
- 		text-align: center;
- 	}
+.wrap {
+	font-family: 'NanumSquareNeo';
+	max-width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
 
-	#myList #hrefImg {
-		float: left;
-		opacity: 1;
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
-	}
-	#myList #hrefImg:hover {
-	  	opacity: .5;
-	}
+#myList {
+	margin-left: 130px;
+}
 	
- 	#myList #timecheck {
- 		margin: 10px 20px 15px 10px;
- 	}
- 	
- 	#myList ul button {
- 		margin-top: 10px;
- 	}
- 	
- 	#myList ul #btns {
- 		width: 150px;
-        margin: 0 auto;
- 	}
- 	
- 	footer {
- 		padding-top: 50px;
- 	}
- 	
+#myList h3 {
+	font-family: 'NanumSquareNeoBold';
+margin: 10px;
+}
+
+#myList h5 {
+	font-family: 'NanumSquareNeoBold';
+	margin: 10px;
+	text-align: center;
+}
+
+#myList ul {
+	margin: 50px 0px 40px 0px;
+}
+
+#myList ul li {
+	list-style: none;
+	text-align: center;
+}
+
+#myList #hrefImg {
+	float: left;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+#myList #hrefImg:hover {
+  	opacity: .5;
+}
+
+#myList #timecheck {
+	margin: 10px 20px 15px 10px;
+}
+
+#myList ul button {
+	margin-top: 10px;
+}
+
+#myList ul #btns {
+	width: 150px;
+      margin: 0 auto;
+}
+
+footer {
+	padding-top: 50px;
+}
+	
 </style>
 </head>
 
 <body>
 <%
-	// 아이디 세션 값
-	String id = (String)session.getAttribute("id");
-	
-	// 예약정보
-	ArrayList<AppointmentDTO> userappointmentlist = (ArrayList<AppointmentDTO>)request.getAttribute("userappointmentlist");
-	
-	// 페이징
-	int currentPage = (Integer)request.getAttribute("currentPage");
-	int startPage = (Integer)request.getAttribute("startPage");
-	int pageBlock = (Integer)request.getAttribute("pageBlock");
-	int endPage = (Integer)request.getAttribute("endPage");
-	int pageCount = (Integer)request.getAttribute("pageCount");
+// 아이디 세션 값
+String id = (String)session.getAttribute("id");
+
+// 예약정보
+ArrayList<AppointmentDTO> userappointmentlist = (ArrayList<AppointmentDTO>)request.getAttribute("userappointmentlist");
+
+// 페이징
+int currentPage = (Integer)request.getAttribute("currentPage");
+int startPage = (Integer)request.getAttribute("startPage");
+int pageBlock = (Integer)request.getAttribute("pageBlock");
+int endPage = (Integer)request.getAttribute("endPage");
+int pageCount = (Integer)request.getAttribute("pageCount");
 %>
+
 <!-- header -->
 <header>
 	<jsp:include page="../inc/my_header.jsp" />
@@ -206,11 +207,6 @@
 				}
 			} // rdao.checkReview(no, adto.getPno()) 
 		} else {
-			%>
- 			<script type="text/javascript">
-   				alert("로그인을 해주세요");
- 			</script>
-			<%
 			response.sendRedirect("MemberLogin.me");
 		} %>
 	</ul> <% // id 확인 메서드

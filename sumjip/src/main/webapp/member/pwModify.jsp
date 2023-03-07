@@ -144,26 +144,18 @@ label {
   flex: 1;
 }
 </style>
-
 </head>
+
 <body>
 <!-- 헤더들어가는 곳 -->
 <jsp:include page="../inc/my_header.jsp"/>
 <!-- 헤더들어가는 곳 -->
 
-<div id="rap">
-
 <%
-
 String id=(String)session.getAttribute("id");
-
-// UserDAO dao=new UserDAO();
-
-// UserDTO dto=dao.getUser(id);
-
 UserDTO dto=(UserDTO)request.getAttribute("dto");
- %> 
-
+%> 
+<div id="rap">
 	<form action="MemberPwModifyPro.me" name="passForm" id="pass_modify" method="post">
 		<fieldset>
 			<legend>비밀번호 변경</legend>
@@ -179,10 +171,6 @@ UserDTO dto=(UserDTO)request.getAttribute("dto");
 			<input type="reset" value="취소" class="btn btn-outline-success">
 		</div>
 	</form>
-
-	
-
-
 </div>
 <!-- 푸터 들어가는 곳 -->
 <jsp:include page="../inc/footer.jsp" />

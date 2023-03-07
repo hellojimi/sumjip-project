@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,71 +7,167 @@
 <meta charset="UTF-8">
 <title>섬집</title>
 <script type="text/javascript">
-function fun1() {
-	   if(document.ac.chk1.checked==false && document.ac.chk2.checked==false){
-	      alert("이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.");
-	      return;
-	   }else if(document.ac.chk1.checked==false || document.ac.chk2.checked==false){
-	      alert("이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.");
-	      return;
-	   }else{
-	      document.ac.submit();
-	   }
+	function fun1() {
+		if (document.ac.chk1.checked == false
+				&& document.ac.chk2.checked == false) {
+			alert("이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.");
+			return;
+		} else if (document.ac.chk1.checked == false
+				|| document.ac.chk2.checked == false) {
+			alert("이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.");
+			return;
+		} else {
+			document.ac.submit();
+		}
 	}
-function fun2() {
-   document.ac.action="Main.me";
-   document.ac.method="post";
-   document.ac.submit();
-}
+	function fun2() {
+		document.ac.action = "Main.me";
+		document.ac.method = "post";
+		document.ac.submit();
+	}
 </script>
 </head>
 <style>
-*{margin: 0;padding: 0;box-sizing: border-box}
-body{background-color: #99b19c;}
-ul>li{list-style: none}
-a{text-decoration: none;}
-.top{margin-top: 150px;}
-.clearfix::after{content: "";display: block;clear: both;}
-#agreeForm{width: 500px;margin: 0 auto;}
-ul.join_box{border: 1px solid #ddd;background-color: #fff;}
-.checkBox,.checkBox>ul{position: relative;}
-.checkBox>ul>li{float: left;}
-.checkBox>ul>li:first-child{width: 85%;padding: 15px;font-weight: 600;color: #888;}
-.checkBox>ul>li:nth-child(2){position: absolute;top: 50%;right: 30px;margin-top: -12px;}
-.checkBox textarea{width: 96%;height: 115px; margin: 0 2%;resize: none; background-color: #f7f7f7;color: #888; border: none;}
-.footBtwrap{margin-top: 15px;}
-.footBtwrap>li{float: left;width: 50%;height: 60px;}
-.footBtwrap>li>button{display: block; width: 100%;height: 100%; font-size: 18px;text-align: center;line-height: 60px;}
-.fpmgBt1{background-color: #bbb;color:#FFFFFF; font-weight: bold; border-width: 0px;}
-.fpmgBt2{background-color: #113000;color: #FFFFFF; font-weight: bold; border-width: 0px;}
-.logo{width: 500px;margin: 0 auto;}
-a{color:#FFFFFF;}
-a:hover {color: #E0FF8B;text-decoration: underline;}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+body {
+	background-color: #99b19c;
+}
+
+ul>li {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+}
+
+.top {
+	margin-top: 150px;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#agreeForm {
+	width: 500px;
+	margin: 0 auto;
+}
+
+ul.join_box {
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.checkBox, .checkBox>ul {
+	position: relative;
+}
+
+.checkBox>ul>li {
+	float: left;
+}
+
+.checkBox>ul>li:first-child {
+	width: 85%;
+	padding: 15px;
+	font-weight: 600;
+	color: #888;
+}
+
+.checkBox>ul>li:nth-child(2) {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -12px;
+}
+
+.checkBox textarea {
+	width: 96%;
+	height: 115px;
+	margin: 0 2%;
+	resize: none;
+	background-color: #f7f7f7;
+	color: #888;
+	border: none;
+}
+
+.footBtwrap {
+	margin-top: 15px;
+}
+
+.footBtwrap>li {
+	float: left;
+	width: 50%;
+	height: 60px;
+}
+
+.footBtwrap>li>button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.fpmgBt1 {
+	background-color: #bbb;
+	color: #FFFFFF;
+	font-weight: bold;
+	border-width: 0px;
+}
+
+.fpmgBt2 {
+	background-color: #113000;
+	color: #FFFFFF;
+	font-weight: bold;
+	border-width: 0px;
+}
+
+.logo {
+	width: 500px;
+	margin: 0 auto;
+}
+
+a {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #E0FF8B;
+	text-decoration: underline;
+}
 </style>
 
 <body>
-<div class="top">
-<!-- 헤더들어가는 곳 -->
-<div class="logo" style="width: 150px;">
-    <a href="Main.me">
-    	<img src="img/islandzip3.png" alt="섬집" style="width: 150px;">
-    </a>
-</div>
-<form action="MemberJoin.me" id="agreeForm" name="ac">
-  <ul class="join_box">
-     <li class="checkBox check01">
-     
-  <ul class="clearfix">
+	<div class="top">
+		<!-- 헤더들어가는 곳 -->
+		<div class="logo" style="width: 150px;">
+			<a href="Main.me"> <img src="img/islandzip3.png" alt="섬집"
+				style="width: 150px;">
+			</a>
+		</div>
+		<form action="MemberJoin.me" id="agreeForm" name="ac">
+			<ul class="join_box">
+				<li class="checkBox check01">
 
-  </ul>
-   </li>
-    <li class="checkBox check02">
-        <ul class="clearfix">
-     <li>이용약관 동의(필수)</li>     
-      <li class="checkBtn">
-       <input type="checkbox" name="chk1" value="동의1"> 
-     </li></ul>
-     <textarea name="" id="">여러분을 환영합니다.
+					<ul class="clearfix">
+
+					</ul>
+				</li>
+				<li class="checkBox check02">
+					<ul class="clearfix">
+						<li>이용약관 동의(필수)</li>
+						<li class="checkBtn"><input type="checkbox" name="chk1"
+							value="동의1"></li>
+					</ul> <textarea name="" id="">여러분을 환영합니다.
 섬집 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 
 본 약관은 다양한 섬집 서비스의 이용과 관련하여 섬집 서비스를 제공하는 섬집 주식회사(이하 ‘섬집’)와 이를 이용하는 섬집 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 섬집 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
 여러분을 환영합니다.
@@ -82,14 +178,14 @@ a:hover {color: #E0FF8B;text-decoration: underline;}
 여러분은 본 약관을 읽고 동의하신 후 회원 가입을 신청하실 수 있으며, 섬집는 이에 대한 승낙을 통해 회원 가입 절차를 완료하고 여러분께 섬집 서비스 이용 계정(이하 ‘계정’)을 부여합니다. 계정이란 회원이 섬집 서비스에 로그인한 이후 이용하는 각종 서비스 이용 이력을 회원 별로 관리하기 위해 설정한 회원 식별 단위를 말합니다. 
 회원은 자신의 계정을 통해 좀더 다양한 섬집 서비스를 보다 편리하게 이용할 수 있습니다. 이와 관련한 상세한 내용은 계정 운영정책 및 고객센터 내 섬집 회원가입 방법 등에서 확인해 주세요.
        </textarea>
-       </li>
-       
-       <li class="checkBox check03">
-          <ul class="clearfix">
-          <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
-          <li class="checkBtn">
-          <input type="checkbox" name="chk2" value="동의2"></li></ul>
-        <textarea name="" id="">여러분을 환영합니다.
+				</li>
+
+				<li class="checkBox check03">
+					<ul class="clearfix">
+						<li>개인정보 수집 및 이용에 대한 안내(필수)</li>
+						<li class="checkBtn"><input type="checkbox" name="chk2"
+							value="동의2"></li>
+					</ul> <textarea name="" id="">여러분을 환영합니다.
 섬집 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 섬집 서비스의 이용과 관련하여 네이버 서비스를 제공하는  섬집 주식회사(이하 ‘섬집’)와 이를 이용하는 섬집 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 섬집 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
 1. 수집하는 개인정보
 이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 섬집 서비스를 회원과 동일하게 이용할 수 있습니다.
@@ -97,16 +193,13 @@ a:hover {color: #E0FF8B;text-decoration: underline;}
 - 회원 가입 시 필수항목으로 아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호, 이메일주소를 수집합니다.
 - 섬집 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.
        </textarea>
-         </li>
-          <li class="checkBox check03">
-                  <ul class="clearfix">
-                      <li>위치정보 이용약관 동의(선택)</li>
-                      <li class="checkBtn">
-                          <input type="checkbox" name="chk3" value="동의3">
-                      </li>
-                  </ul>
- 
-                    <textarea name="" id="">위치기반서비스 이용약관에 동의하시면, 위치를 활용한 광고 정보 수신 등을 포함하는 섬집 위치기반 서비스를 이용할 수 있습니다.
+				</li>
+				<li class="checkBox check03">
+					<ul class="clearfix">
+						<li>위치정보 이용약관 동의(선택)</li>
+						<li class="checkBtn"><input type="checkbox" name="chk3"
+							value="동의3"></li>
+					</ul> <textarea name="" id="">위치기반서비스 이용약관에 동의하시면, 위치를 활용한 광고 정보 수신 등을 포함하는 섬집 위치기반 서비스를 이용할 수 있습니다.
 제 1 조 (목적)
 이 약관은  섬집 (이하 “회사”)가 제공하는 위치기반서비스와 관련하여 회사와 개인위치정보주체와의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
 제 2 조 (약관 외 준칙)
@@ -119,21 +212,21 @@ a:hover {color: #E0FF8B;text-decoration: underline;}
 4. 이용자 보호 및 부정 이용 방지: 개인위치정보주체 또는 이동성 있는 기기의 위치를 이용하여 권한없는 자의 비정상적인 서비스 이용 시도 등을 차단합니다.
 5. 길 안내 등 생활편의 서비스 제공: 교통정보와 길 안내 등 최적의 경로를 지도로 제공하며, 주변 시설물 찾기, 뉴스/날씨 등 생활정보, 긴급구조 서비스, 주소 자동 입력 등 다양한 운전 및 생활 편의 서비스를 제공합니다.
        </textarea>
-                </li>
-         <li class="checkBox check04">
-         <ul class="clearfix">
-          <li>이벤트 등 프로모션 알림 메일 수신(선택)</li>
-           <li class="checkBtn">
-           <input type="checkbox" name="chk4" value="동의4"></li>
-            </ul>
- 
-                </li>
-            </ul>
-            <ul class="footBtwrap clearfix">
-               <li><button type="button" class="fpmgBt1" onclick="fun2()">비동의</button></li>
-                <li><button type="button" class="fpmgBt2" onclick="fun1()">동의</button></li> 
-            </ul>
-        </form>
-    </div>
+				</li>
+				<li class="checkBox check04">
+					<ul class="clearfix">
+						<li>이벤트 등 프로모션 알림 메일 수신(선택)</li>
+						<li class="checkBtn"><input type="checkbox" name="chk4"
+							value="동의4"></li>
+					</ul>
+
+				</li>
+			</ul>
+			<ul class="footBtwrap clearfix">
+				<li><button type="button" class="fpmgBt1" onclick="fun2()">비동의</button></li>
+				<li><button type="button" class="fpmgBt2" onclick="fun1()">동의</button></li>
+			</ul>
+		</form>
+	</div>
 </body>
 </html>

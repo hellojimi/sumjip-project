@@ -4,8 +4,8 @@
 	          auth="Container"
 	          type="javax.sql.DataSource"
 	          driverClassName="com.mysql.cj.jdbc.Driver"
-	          url="jdbc:mysql://db.itwillbs.dev:3306/class1_221020_team3"
-	          username="class1_221020_team3" 
+	          url="jdbc:mysql://localhost:3306/sumjip"
+	          username="root" 
 	          password="1234"
 	/>
 </Context>

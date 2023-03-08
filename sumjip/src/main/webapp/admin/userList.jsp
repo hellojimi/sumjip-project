@@ -33,8 +33,8 @@
 				}else{
 					%>
 				<script type="text/javascript">
-				alert("접근 권한이 없습니다.");
-				history.back();
+					alert("접근 권한이 없습니다.");
+					history.back();
 				</script>
 				<%
 				}

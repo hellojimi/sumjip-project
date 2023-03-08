@@ -33,8 +33,8 @@
 				}else{
 					%>
 				<script type="text/javascript">
-				alert("접근 권한이 없습니다.");
-				history.back();
+					alert("접근 권한이 없습니다.");
+					history.back();
 				</script>
 				<%
 				}
@@ -85,12 +85,11 @@
 						<!-- 답변이 있을때만 답변확인버튼 보이게 -->
 						<%
 						if(qdto.getAnswer() != null){ 
-							
 							 %>
 							<button type="button" class="ppp" onclick="location.href='AdminQnaAnswer.ad?qno=<%=qdto.getQno() %>'">답변확인</button>
 							<%
 						}else{
-						 %>
+						 	%>
 							<button type="button" class="ppp" onclick="location.href='AdminAnswerWriteForm.ad?qno=<%=qdto.getQno() %>'">답변쓰기</button>
 							<%
 						}

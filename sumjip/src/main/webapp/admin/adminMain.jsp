@@ -1,4 +1,3 @@
-
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="board.BoardDTO"%>
@@ -28,11 +27,11 @@ if(id==null){
 
 }else{
 	%>
-<script type="text/javascript">
-alert("접근 권한이 없습니다.");
-history.back();
-</script>
-<%
+	<script type="text/javascript">
+		alert("접근 권한이 없습니다.");
+		history.back();
+	</script>
+	<%
 }
 %>
 </head>
@@ -41,6 +40,7 @@ history.back();
 <!-- 헤더들어가는 곳 -->
 <jsp:include page="../inc/ad_header.jsp" />
 <!-- 헤더들어가는 곳 -->
+
 <!-- Backgrounds -->
 	<div class="container">
 	   	<div class="row">
@@ -53,8 +53,6 @@ history.back();
 							ArrayList<BoardDTO> boardList=dao.getBoardList(1, 10);
 							for(int i=0;i<boardList.size();i++){
 								BoardDTO dto1=boardList.get(i);
-								
-								
 								%>
 								<tr>
 									<td style="width:50px"><%=dto1.getBno() %></td>
@@ -67,10 +65,7 @@ history.back();
 							}
 							%>
 					</table>
-				</div>
-				
-				
-				
+				</div>	
 			</div>
 		
 			<div class="col-lg-5">
@@ -132,19 +127,10 @@ history.back();
     		<div class="col-lg-3">
     		</div>
     	</div>
-    </div>
-    
-    
-    
-    
-    
+    </div> 
 </head>
 <body>
-    <!--Div that will hold the pie chart-->
-    
  
-         
-      
    
 </body>
 </html>

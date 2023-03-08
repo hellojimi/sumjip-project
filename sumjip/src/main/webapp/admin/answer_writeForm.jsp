@@ -1,7 +1,7 @@
 <%@page import="member.UserDTO"%>
 <%@page import="member.UserDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,37 +10,36 @@
 <title>섬집 관리자 페이지</title>
 </head>
 <body>
-<%
-//id값 받아오기
-String id=(String)session.getAttribute("id");
-int qno=Integer.parseInt(request.getParameter("qno"));
-UserDAO rdao=new UserDAO();
-UserDTO rdto=rdao.getUser(id);
-int no = rdto.getNo();
+	<%
+	//id값 받아오기
+	String id = (String) session.getAttribute("id");
+	int qno = Integer.parseInt(request.getParameter("qno"));
+	UserDAO rdao = new UserDAO();
+	UserDTO rdto = rdao.getUser(id);
+	int no = rdto.getNo();
 
-if(id==null){
-	response.sendRedirect("AdminLogin.ad");
-}else if(id.equals("admin")){
+	if (id == null) {
+		response.sendRedirect("AdminLogin.ad");
+	} else if (id.equals("admin")) {
 
-}else{
+	} else {
 	%>
-<script type="text/javascript">
-alert("접근 권한이 없습니다.");
-history.back();
-</script>
-<%
-}
-%>
-<jsp:include page="../inc/ad_header.jsp" />
-<!-- Backgrounds -->
+	<script type="text/javascript">
+		alert("접근 권한이 없습니다.");
+		history.back();
+	</script>
+	<%
+	}
+	%>
+	<jsp:include page="../inc/ad_header.jsp" />
+	<!-- Backgrounds -->
 	<div class="container">
-    	<div class="row">
-			
+		<div class="row">
 			<div class="col-lg-12">
-				<div class="content-main adminichi">		
+				<div class="content-main adminichi">
 					<h1 class="taitoru">Answer Write</h1>
-					<form action="AdminAnswerWritePro.ad" method="post"> 
-						<input type="hidden" name="no" value="<%=no%>">
+					<form action="AdminAnswerWritePro.ad" method="post">
+						<input type="hidden" name="no" value="<%=no%>"> 
 						<input type="hidden" name="qno" value="<%=qno%>">
 						<div class="iro">
 							<div class="mb-3">

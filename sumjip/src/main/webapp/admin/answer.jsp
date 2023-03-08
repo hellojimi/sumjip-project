@@ -13,24 +13,24 @@
 <title>섬집 관리자 페이지</title>
 </head>
 <%
-SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy.MM.dd");
-String id=(String)session.getAttribute("id");
-QnaDTO qdto = (QnaDTO)request.getAttribute("qdto");
-UserDTO udto = (UserDTO)request.getAttribute("udto");
-int qno=(Integer)request.getAttribute("qno");
-
-if(id==null){
-	response.sendRedirect("AdminLogin.ad");
-}else if(id.equals("admin")){
-
-}else{
-	%>
-<script type="text/javascript">
-alert("접근 권한이 없습니다.");
-history.back();
-</script>
-<%
-}
+	SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy.MM.dd");
+	String id=(String)session.getAttribute("id");
+	QnaDTO qdto = (QnaDTO)request.getAttribute("qdto");
+	UserDTO udto = (UserDTO)request.getAttribute("udto");
+	int qno=(Integer)request.getAttribute("qno");
+	
+	if(id==null){
+		response.sendRedirect("AdminLogin.ad");
+	}else if(id.equals("admin")){
+	
+	}else{
+		%>
+		<script type="text/javascript">
+			alert("접근 권한이 없습니다.");
+			history.back();
+		</script>
+	<%
+	}
 %>
 <body>
 <!-- 헤더들어가는 곳 -->
@@ -67,7 +67,6 @@ history.back();
 						<input type="button" value="글수정" class="ppp" onclick="location.href='AdminAnswerUpdateForm.ad?qno=<%=qdto.getQno() %>'">
 						<input type="button" value="답변삭제" class="ppp" onclick="location.href='AdminAnswerDelete.ad?qno=<%=qdto.getQno() %>'">
 					</div>
-					
 				</div>
 			</div>
 		</div>

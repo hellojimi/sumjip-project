@@ -143,8 +143,6 @@
 			</div>
 		</div>
 	</div>
-<!-- 푸터 들어가는 곳 -->
-<%-- <jsp:include page="../inc/footer.jsp" /> --%>
 
 </body>
 </html>

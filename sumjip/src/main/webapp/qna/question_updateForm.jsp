@@ -78,50 +78,48 @@ textarea.form-control{
 <jsp:include page="../inc/header.jsp" />
 <!-- 헤더들어가는 곳 -->
 <div id="wrap">
-<%
-// int qno=Integer.parseInt(request.getParameter("qno"));
-
-// QnaDAO dao=new QnaDAO();
-
-// QnaDTO dto = dao.getQna(qno); 
-
-QnaDTO dto = (QnaDTO)request.getAttribute("dto");
-
-//id값 받아오기
-String id=(String)session.getAttribute("id");
-
-int no = 0;
-//로그인 되어있지 않으면 로그인화면으로
-if(id==null){
-	response.sendRedirect("MemberLogin.me");
-}else{
-
-UserDAO rdao=new UserDAO();
-UserDTO rdto=rdao.getUser(id);
-no = rdto.getNo();
-}
-%>
-<div class="qna_writeContainer">
-<!-- 게시판 글쓰기 부분 -->
-<form action="QuestionUpdatePro.qa" method="post"> 
-<div class="container">
-<h3 class="heading-section">Question 수정</h3>
-
-	<input type="hidden" name="qno" value="<%=dto.getQno() %>">
-	<input type="hidden" name="no" value="<%=dto.getNo() %>" >
-	<table class="table table-hover">
-		<tbody>
-			<tr><td><input type="text" name="name" class="form-control" maxlength="40" value="<%=id %>" readonly></td></tr>
-			<tr><td><input type="text" name="qtitle" class="form-control" value=<%=dto.getQtitle() %> placeholder="제목을 작성하세요"></td></tr>
-			<tr><td><textarea name="qcontent" class="form-control" maxlength="1024" style="height: 400px;" placeholder="글 내용을 작성하세요"><%=dto.getQcontent() %></textarea></td></tr>
-		</tbody>
-	</table>
-	<div id="table_search">
-		<button type="submit" value="글수정" class="btn btn-outline-success">글수정</button><br>
+	<%
+	QnaDTO dto = (QnaDTO)request.getAttribute("dto");
+	
+	//id값 받아오기
+	String id=(String)session.getAttribute("id");
+	
+	int no = 0;
+	//로그인 되어있지 않으면 로그인화면으로
+	if(id==null){
+		response.sendRedirect("MemberLogin.me");
+	}else{
+		UserDAO rdao=new UserDAO();
+		UserDTO rdto=rdao.getUser(id);
+		no = rdto.getNo();
+	}
+	%>
+	<div class="qna_writeContainer">
+		<!-- 게시판 글쓰기 부분 -->
+		<form action="QuestionUpdatePro.qa" method="post"> 
+		<div class="container">
+		<h3 class="heading-section">Question 수정</h3>
+			<input type="hidden" name="qno" value="<%=dto.getQno() %>">
+			<input type="hidden" name="no" value="<%=dto.getNo() %>" >
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td><input type="text" name="name" class="form-control" maxlength="40" value="<%=id %>" readonly></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="qtitle" class="form-control" value=<%=dto.getQtitle() %> placeholder="제목을 작성하세요"></td>
+					</tr>
+					<tr>
+						<td><textarea name="qcontent" class="form-control" maxlength="1024" style="height: 400px;" placeholder="글 내용을 작성하세요"><%=dto.getQcontent() %></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="table_search">
+				<button type="submit" value="글수정" class="btn btn-outline-success">글수정</button><br>
+			</div>
+		</div>	
+		</form>
 	</div>
-</div>	
-</form>
-</div>
 </div>
 <!-- 푸터 들어가는 곳 -->
 <jsp:include page="../inc/footer.jsp" />

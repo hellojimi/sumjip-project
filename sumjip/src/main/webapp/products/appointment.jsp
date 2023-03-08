@@ -21,7 +21,6 @@
     line-height: 1.5;
     font-weight: 400;
     font-family: 'NanumSquareNeo';
-/*     font-family: "Poppins", Arial, sans-serif; */
     font-weight: bold;
     text-align: center;
     margin: 25px;
@@ -42,14 +41,11 @@ legend {
 }
 .menu-section{
 	font-size: 25px;
-    color: #393939;
-/*     line-height: 1.5; */
-/*     font-weight: 400; */
-/*     font-family: "Poppins", Arial, sans-serif; */
+  	color: #393939;
 	font-family: 'NanumSquareNeo';
-    font-weight: bold;
-    text-align: center;
-    margin: 25px;
+	font-weight: bold;
+	text-align: center;
+	margin: 25px;
 }
 
 fieldset {
@@ -138,18 +134,19 @@ label {
 }
 </style>
 </head>
+
 <body>
 <!-- 헤더파일들어가는 곳 -->
 <jsp:include page="../inc/header.jsp" />
 <!-- 헤더파일들어가는 곳 -->
+
 <%
 String id=(String)session.getAttribute("id"); 
 ProductDTO pdto = (ProductDTO)request.getAttribute("pdto");
 UserDTO udto = (UserDTO)request.getAttribute("udto");
-	
-	%>
+%>
+
 <article>
-<!-- 	<h2 class="heading-section">예약</h2> -->
 	<div id="wrap">              
   		<form action="ProductAppointmentPro.pr" name="appointmentform" id="appointment" method="post">
           <fieldset>                  
@@ -167,23 +164,23 @@ UserDTO udto = (UserDTO)request.getAttribute("udto");
 					입실일 : <input type="date" name="indate" id="inDate"><br>
 					퇴실일 : <input type="date" name="outdate"><br>
 					인원수 : <select name="guest">
-                                                    <option value="1">1명</option>
-                                                    <option value="2">2명</option>
-                                                    <option value="3">3명</option>
-                                                    <option value="4">4명</option>
-                                                    <option value="5">5명</option>
-                                                    <option value="6">6명</option>
-                                                    <option value="7">7명</option>
-                                                    <option value="8">8명</option>
-                                                    <option value="9">9명</option></select><br>
-				</div>
+	                           <option value="1">1명</option>
+	                           <option value="2">2명</option>
+	                           <option value="3">3명</option>
+	                           <option value="4">4명</option>
+	                           <option value="5">5명</option>
+	                           <option value="6">6명</option>
+	                           <option value="7">7명</option>
+	                           <option value="8">8명</option>
+	                           <option value="9">9명</option>
+	                       </select><br>
+					</div>
 					<input type="submit" value="예약하기">
 					<input type="hidden" name="no" value="<%=udto.getNo()%>">
 					<input type="hidden" name="pno" value="<%=pdto.getPno()%>">
-					</fieldset>
-				</form>
-               </div>  
-                  
+			</fieldset>
+		</form>
+	</div>            
 </article>
 <!-- 푸터 들어가는 곳 -->
 <jsp:include page="../inc/footer.jsp" />
